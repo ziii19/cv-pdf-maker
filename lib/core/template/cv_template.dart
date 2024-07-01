@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:create_pdf/home/blocs/input/input_bloc.dart';
+import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 class CreateCv {
@@ -12,6 +13,10 @@ class CreateCv {
     final image = pw.MemoryImage(
       File(input!.image!.path).readAsBytesSync(),
     );
+    final robotoRegular =
+        pw.Font.ttf(await rootBundle.load('assets/fonts/Roboto-Regular.ttf'));
+    final robotoBold =
+        pw.Font.ttf(await rootBundle.load('assets/fonts/Roboto-Bold.ttf'));
 
     pdf.addPage(
       pw.Page(
@@ -37,6 +42,7 @@ class CreateCv {
                   style: pw.TextStyle(
                     fontSize: 32,
                     fontWeight: pw.FontWeight.bold,
+                    font: robotoBold,
                   ),
                 ),
               ],
@@ -47,12 +53,16 @@ class CreateCv {
               style: pw.TextStyle(
                 fontSize: 24,
                 fontWeight: pw.FontWeight.bold,
+                font: robotoBold,
               ),
             ),
             pw.SizedBox(height: 10),
             pw.Text(
               input.about ?? '',
-              style: const pw.TextStyle(fontSize: 16),
+              style: pw.TextStyle(
+                fontSize: 16,
+                font: robotoRegular,
+              ),
             ),
             pw.SizedBox(height: 20),
             pw.Text(
@@ -60,12 +70,16 @@ class CreateCv {
               style: pw.TextStyle(
                 fontSize: 20,
                 fontWeight: pw.FontWeight.bold,
+                font: robotoBold,
               ),
             ),
             pw.SizedBox(height: 10),
             pw.Text(
               input.education ?? '',
-              style: const pw.TextStyle(fontSize: 16),
+              style: pw.TextStyle(
+                fontSize: 16,
+                font: robotoRegular,
+              ),
             ),
             pw.SizedBox(height: 20),
             pw.Text(
@@ -73,12 +87,16 @@ class CreateCv {
               style: pw.TextStyle(
                 fontSize: 20,
                 fontWeight: pw.FontWeight.bold,
+                font: robotoBold,
               ),
             ),
             pw.SizedBox(height: 10),
             pw.Text(
               input.skills ?? '',
-              style: const pw.TextStyle(fontSize: 16),
+              style: pw.TextStyle(
+                fontSize: 16,
+                font: robotoRegular,
+              ),
             ),
             pw.SizedBox(height: 20),
             pw.Text(
@@ -86,12 +104,16 @@ class CreateCv {
               style: pw.TextStyle(
                 fontSize: 20,
                 fontWeight: pw.FontWeight.bold,
+                font: robotoBold,
               ),
             ),
             pw.SizedBox(height: 10),
             pw.Text(
               input.language ?? '',
-              style: const pw.TextStyle(fontSize: 16),
+              style: pw.TextStyle(
+                fontSize: 16,
+                font: robotoRegular,
+              ),
             ),
             pw.SizedBox(height: 20),
             pw.Text(
@@ -99,12 +121,16 @@ class CreateCv {
               style: pw.TextStyle(
                 fontSize: 20,
                 fontWeight: pw.FontWeight.bold,
+                font: robotoBold,
               ),
             ),
             pw.SizedBox(height: 10),
             pw.Text(
               input.organization ?? '',
-              style: const pw.TextStyle(fontSize: 16),
+              style: pw.TextStyle(
+                fontSize: 16,
+                font: robotoRegular,
+              ),
             ),
           ],
         ),
