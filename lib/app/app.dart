@@ -10,6 +10,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'CV Maker',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Roboto'),
       home: HomePage(),
     );
   }
