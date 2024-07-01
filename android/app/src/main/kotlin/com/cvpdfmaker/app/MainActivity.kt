@@ -1,4 +1,4 @@
-package com.example.create_pdf
+package com.cvpdfmaker.app
 
 import io.flutter.embedding.android.FlutterActivity
 

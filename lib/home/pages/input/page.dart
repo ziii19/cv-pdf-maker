@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:create_pdf/core/components/content_sheets.dart';
-import 'package:create_pdf/core/components/regular_text_input.dart';
-import 'package:create_pdf/core/template/cv_template.dart';
-import 'package:create_pdf/home/blocs/input/input_bloc.dart';
-import 'package:create_pdf/home/home.dart';
+import 'package:cv_pdf_maker/core/components/content_sheets.dart';
+import 'package:cv_pdf_maker/core/components/regular_text_input.dart';
+import 'package:cv_pdf_maker/core/template/cv_template.dart';
+import 'package:cv_pdf_maker/home/blocs/input/input_bloc.dart';
+import 'package:cv_pdf_maker/home/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

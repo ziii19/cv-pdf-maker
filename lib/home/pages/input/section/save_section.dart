@@ -30,6 +30,7 @@ class _SaveSectionState extends State<_SaveSection> {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             RegularTextInput(
               hintText: 'File name',
@@ -39,14 +40,22 @@ class _SaveSectionState extends State<_SaveSection> {
             BlocBuilder<InputBloc, InputState>(
               builder: (context, state) {
                 return ElevatedButton(
-                    onPressed: () async {
-                      final result = await CreateCv.createPdf(
-                        input: state.input,
-                      );
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                    ),
+                    onPressed: state.isSave
+                        ? () async {
+                            final result = await CreateCv.createPdf(
+                              input: state.input,
+                            );
 
-                      showAlert(result.$1, result.$2);
-                    },
-                    child: const Text('Download Cv'));
+                            showAlert(result.$1, result.$2);
+                          }
+                        : null,
+                    child: const Text(
+                      'Download Cv',
+                      style: TextStyle(color: Colors.white),
+                    ));
               },
             )
           ],

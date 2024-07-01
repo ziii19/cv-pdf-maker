@@ -1,4 +1,4 @@
-import 'package:create_pdf/home/blocs/input/input_bloc.dart';
+import 'package:cv_pdf_maker/home/blocs/input/input_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

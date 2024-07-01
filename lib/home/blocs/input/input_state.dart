@@ -18,14 +18,14 @@ class InputState extends Equatable {
 
   InputState get input {
     return InputState(
-        name: name ?? '',
+        name: name,
         image: image,
-        about: about ?? '',
-        education: education ?? '',
-        skills: skills ?? '',
-        language: language ?? '',
-        organization: organization ?? '',
-        filePath: filePath ?? '');
+        about: about,
+        education: education,
+        skills: skills,
+        language: language,
+        organization: organization,
+        filePath: filePath);
   }
 
   final XFile? image;
@@ -36,6 +36,8 @@ class InputState extends Equatable {
   final String? language;
   final String? organization;
   final String? filePath;
+
+  bool get isSave => filePath != null && filePath!.isNotEmpty;
 
   InputState copywith(
       {XFile? image,

@@ -1,6 +1,6 @@
 # @format
 
-name: create_pdf
+name: cv_pdf_maker
 description: "A new Flutter project."
 publish_to: "none"
 version: 0.1.0
