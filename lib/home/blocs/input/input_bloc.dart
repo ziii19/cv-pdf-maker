@@ -1,6 +1,5 @@
 import 'package:create_pdf/core/helper/image_helper.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:create_pdf/home/models/input_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -14,17 +13,18 @@ class InputBloc extends Bloc<InputEvent, InputState> {
     });
     on<ChangeInput>((event, emit) {
       emit(state.copywith(
-        about: event.input.about,
-        name: event.input.name,
-        education: event.input.education,
-        language: event.input.language,
-        organization: event.input.organization,
+        about: event.about,
+        name: event.name,
+        education: event.education,
+        language: event.language,
+        organization: event.organization,
+        filePath: event.filePath,
       ));
     });
 
     on<ChangeImageInput>((event, emit) async {
       final image = await ImageHelper.getImage(event.source);
-      emit(state.copywith(image: image));
+      emit(state.copywith(image: image!));
     });
   }
 }

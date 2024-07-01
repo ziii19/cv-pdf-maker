@@ -7,7 +7,7 @@ part of 'input_model.dart';
 // **************************************************************************
 
 InputModel _$InputModelFromJson(Map<String, dynamic> json) => InputModel(
-      image: json['image'] as String,
+      image: json['image'] as String?,
       name: json['name'] as String,
       about: json['about'] as String,
       education: json['education'] as String,

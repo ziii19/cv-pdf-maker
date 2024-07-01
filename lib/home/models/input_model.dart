@@ -5,7 +5,7 @@ part 'input_model.g.dart';
 
 @JsonSerializable()
 class InputModel extends Equatable {
-  final String image;
+  final String? image;
   final String name;
   final String about;
   final String education;
@@ -14,7 +14,7 @@ class InputModel extends Equatable {
   final String organization;
 
   const InputModel({
-    required this.image,
+    this.image,
     required this.name,
     required this.about,
     required this.education,

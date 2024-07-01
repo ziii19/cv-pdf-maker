@@ -7,14 +7,14 @@ import 'package:image_picker/image_picker.dart';
 class ImageHelper {
   ImageHelper._();
 
-  static Future<String?> getImage(ImageSource source) async {
+  static Future<XFile?> getImage(ImageSource source) async {
     try {
       final picker = ImagePicker();
 
       final image = await picker.pickImage(source: source);
 
       if (image != null) {
-        return base64Encode(await image.readAsBytes());
+        return image;
       }
       return null;
     } catch (e) {
