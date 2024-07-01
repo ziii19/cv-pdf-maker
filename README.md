@@ -26,6 +26,6 @@ CV PDF Maker is a Flutter application that allows users to easily create CVs in 
    flutter run
    ```
 
-## Download for android
+## Download Apk for android
 
-https://www.mediafire.com/file/6tn24wo0zzg9s8j/CV_pdf_maker.apk/file
+https://www.mediafire.com/file/1fuj7bnhxxdhwjr/CV_Pdf_Maker.apk/file
