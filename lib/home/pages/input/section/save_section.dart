@@ -90,6 +90,10 @@ class _SaveSectionState extends State<_SaveSection> {
           ],
         );
       },
-    );
+    ).then((value) => Navigator.pushAndRemoveUntil(
+          context,
+          CupertinoPageRoute(builder: (context) => const HomePage()),
+          (route) => false,
+        ));
   }
 }

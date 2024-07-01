@@ -15,6 +15,7 @@ class InputBloc extends Bloc<InputEvent, InputState> {
       emit(state.copywith(
         about: event.about,
         name: event.name,
+        skills: event.skills,
         education: event.education,
         language: event.language,
         organization: event.organization,

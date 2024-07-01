@@ -119,9 +119,11 @@ class _InputCvState extends State<InputCv> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                         ),
-                        onPressed: () {
-                          saveat();
-                        },
+                        onPressed: state.isValid
+                            ? () {
+                                saveat();
+                              }
+                            : null,
                         child: const Text(
                           'Download CV',
                           style: TextStyle(color: Colors.white),

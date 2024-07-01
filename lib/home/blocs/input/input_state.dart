@@ -39,6 +39,21 @@ class InputState extends Equatable {
 
   bool get isSave => filePath != null && filePath!.isNotEmpty;
 
+  bool get isValid =>
+      image != null &&
+      name != null &&
+      name!.isNotEmpty &&
+      about != null &&
+      about!.isNotEmpty &&
+      education != null &&
+      education!.isNotEmpty &&
+      skills != null &&
+      skills!.isNotEmpty &&
+      language != null &&
+      language!.isNotEmpty &&
+      organization != null &&
+      organization!.isNotEmpty;
+
   InputState copywith(
       {XFile? image,
       String? name,

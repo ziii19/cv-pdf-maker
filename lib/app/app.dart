@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => InputBloc(),
       child: MaterialApp(
-        title: 'CV Maker',
+        title: 'CV Pdf Maker',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Roboto'),
         home: const HomePage(),
