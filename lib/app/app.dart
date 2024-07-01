@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/home/home.dart';
+import '../home/home.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
       title: 'CV Maker',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Roboto'),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

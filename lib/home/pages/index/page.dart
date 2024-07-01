@@ -1,4 +1,4 @@
-import 'package:create_pdf/features/home/pages/cv/page.dart';
+import 'package:create_pdf/home/pages/cv/page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

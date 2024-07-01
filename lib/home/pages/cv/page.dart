@@ -1,4 +1,4 @@
-import 'package:create_pdf/features/home/pages/input/page.dart';
+import 'package:create_pdf/home/pages/input/page.dart';
 import 'package:flutter/material.dart';
 
 class CvPage extends StatelessWidget {
