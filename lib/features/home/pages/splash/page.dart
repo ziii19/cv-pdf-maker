@@ -1,4 +1,5 @@
-import 'package:cv_pdf_maker/features/home/home.dart';
+// import 'package:cv_pdf_maker/features/home/home.dart';
+import 'package:cv_pdf_maker/features/home/pages/main/page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class SplashPage extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3))
         .then((value) => Navigator.pushAndRemoveUntil(
               context,
-              MaterialPageRoute(builder: (context) => const HomePage()),
+              MaterialPageRoute(builder: (context) => const MainPage()),
               (route) => false,
             ));
     return Scaffold(

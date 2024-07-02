@@ -9,10 +9,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: const Text(
           'CV Maker',
-          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: ListView(
@@ -24,23 +22,22 @@ class HomePage extends StatelessWidget {
             },
             child: Container(
               margin: const EdgeInsets.all(16),
-              padding: const EdgeInsets.all(2),
+              padding: const EdgeInsets.only(top: 10, bottom: 10),
               width: double.infinity,
-              height: 100,
+              height: 250,
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(.3),
+                color: Colors.black.withOpacity(.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
                 children: [
                   Container(
-                    width: 80,
+                    width: 250,
                     decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                         image: DecorationImage(
                             image: AssetImage('assets/images/image.png'))),
                   ),
-                  const SizedBox(width: 20),
                   const Text(
                     'Simple CV',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),

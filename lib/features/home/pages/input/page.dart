@@ -5,6 +5,7 @@ import 'package:cv_pdf_maker/core/components/regular_text_input.dart';
 import 'package:cv_pdf_maker/core/template/cv_template.dart';
 import 'package:cv_pdf_maker/features/home/blocs/input/input_bloc.dart';
 import 'package:cv_pdf_maker/features/home/home.dart';
+import 'package:cv_pdf_maker/features/home/pages/main/page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -123,8 +124,10 @@ class _InputCvState extends State<InputCv> {
                             ? () {
                                 saveat();
                               }
-                            : null,
-                        child: const Text(
+                            : () {
+                                showAlert();
+                              },
+                        child: Text(
                           'Download CV',
                           style: TextStyle(color: Colors.white),
                         )),
@@ -135,6 +138,26 @@ class _InputCvState extends State<InputCv> {
           ],
         ),
       ),
+    );
+  }
+
+  void showAlert() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Warning'),
+          content: const Text('All fields are required!'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context); // Ini menutup dialog
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
     );
   }
 

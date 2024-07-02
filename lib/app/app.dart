@@ -13,7 +13,16 @@ class MainApp extends StatelessWidget {
       child: MaterialApp(
         title: 'CV Pdf Maker',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(fontFamily: 'Roboto'),
+        theme: ThemeData(
+            fontFamily: 'Roboto',
+            scaffoldBackgroundColor: Colors.white.withOpacity(.95),
+            appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.blue,
+              titleTextStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.black),
+            )),
         home: const SplashPage(),
       ),
     );

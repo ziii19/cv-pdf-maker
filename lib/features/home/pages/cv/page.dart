@@ -15,7 +15,7 @@ class CvPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/image.png'),
+            Card(elevation: 5, child: Image.asset('assets/images/image.png')),
           ],
         ),
       ),

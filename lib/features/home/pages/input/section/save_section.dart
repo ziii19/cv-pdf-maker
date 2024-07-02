@@ -78,7 +78,7 @@ class _SaveSectionState extends State<_SaveSection> {
                       Navigator.pushAndRemoveUntil(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => const HomePage()),
+                            builder: (context) => const MainPage()),
                         (route) => false,
                       );
                     }
@@ -90,10 +90,18 @@ class _SaveSectionState extends State<_SaveSection> {
           ],
         );
       },
-    ).then((value) => Navigator.pushAndRemoveUntil(
-          context,
-          CupertinoPageRoute(builder: (context) => const HomePage()),
-          (route) => false,
-        ));
+    ).then((value) {
+      return isResult
+          ? () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                CupertinoPageRoute(builder: (context) => const MainPage()),
+                (route) => false,
+              );
+            }
+          : () {
+              Navigator.pop(context);
+            };
+    });
   }
 }
