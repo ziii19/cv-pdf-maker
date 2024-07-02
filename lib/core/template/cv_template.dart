@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:cv_pdf_maker/home/blocs/input/input_bloc.dart';
+import 'package:cv_pdf_maker/features/home/blocs/input/input_bloc.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pw;
 

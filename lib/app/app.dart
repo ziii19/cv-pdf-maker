@@ -1,8 +1,7 @@
-import 'package:cv_pdf_maker/home/blocs/input/input_bloc.dart';
+import 'package:cv_pdf_maker/features/home/blocs/input/input_bloc.dart';
+import 'package:cv_pdf_maker/features/home/pages/splash/page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../home/home.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -15,7 +14,7 @@ class MainApp extends StatelessWidget {
         title: 'CV Pdf Maker',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Roboto'),
-        home: const HomePage(),
+        home: const SplashPage(),
       ),
     );
   }
