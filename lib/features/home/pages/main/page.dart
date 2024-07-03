@@ -21,6 +21,11 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'CV Pdf Maker',
+        ),
+      ),
       body: PageView(
         controller: pageController,
         onPageChanged: (value) => setState(() {

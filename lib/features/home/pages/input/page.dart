@@ -4,7 +4,6 @@ import 'package:cv_pdf_maker/core/components/content_sheets.dart';
 import 'package:cv_pdf_maker/core/components/regular_text_input.dart';
 import 'package:cv_pdf_maker/core/template/cv_template.dart';
 import 'package:cv_pdf_maker/features/home/blocs/input/input_bloc.dart';
-import 'package:cv_pdf_maker/features/home/home.dart';
 import 'package:cv_pdf_maker/features/home/pages/main/page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -127,7 +126,7 @@ class _InputCvState extends State<InputCv> {
                             : () {
                                 showAlert();
                               },
-                        child: Text(
+                        child: const Text(
                           'Download CV',
                           style: TextStyle(color: Colors.white),
                         )),
